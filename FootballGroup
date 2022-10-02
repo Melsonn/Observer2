@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class FootballGroup {
+    private String news;
+    private List<Follower> follower = new ArrayList<>();
+
+    public void follow(Follower follower){
+        this.follower.add(follower);
+    }
+
+    public void unfollow(Follower follower2){
+        this.follower.remove(follower2);
+    }
+
+    public void setnews(String footballnews){
+        this.news = footballnews;
+
+        for(Follower follower: this.follower){
+            follower.update(this.news);
+        }
+    }
+}
