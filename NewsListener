@@ -1,0 +1,3 @@
+public interface NewsListener{
+    void update(String news);
+}
